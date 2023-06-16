@@ -3,33 +3,39 @@ import Todo from "components/Todo";
 import { v4 as uuidv4 } from "uuid";
 import "css/Style.css";
 
+/**
+ * 할 일을 추가하는 컴포넌트
+ * @returns {JSX.Element}
+ */
 export default function AddTodo() {
-  const [todos, setTodos] = useState([
-    {
-      id: uuidv4(),
-      title: "MyTodoList 만들기",
-      body: "리액트를 활용해서 만들어보자!",
-      isDone: true,
-    },
-    {
-      id: uuidv4(),
-      title: "MyTodoList 연습하기",
-      body: "10번 반복 연습하자!!",
-      isDone: false,
-    },
-  ]);
+  const [todos, setTodos] = useState(
+    () => JSON.parse(window.localStorage.getItem("todos")) || []
+  );
+  window.localStorage.setItem("todos", JSON.stringify(todos));
+
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
+  /**
+   * 제목 입력 이벤트 핸들러
+   * @param {Object} event - 이벤트 객체
+   */
   const titleChangeHandler = (event) => {
     setTitle(event.target.value);
   };
 
+  /**
+   * 내용 입력 이벤트 핸들러
+   * @param {Object} event - 이벤트 객체
+   */
   const bodyChangeHandler = (event) => {
     setBody(event.target.value);
   };
 
-  // [추가하기]버튼 클릭 이벤트핸들러
+  /**
+   * [추가하기] 버튼 클릭 이벤트 핸들러
+   * @param {Object} event - 이벤트 객체
+   */
   const onAddBtnHandler = (event) => {
     event.preventDefault();
     const newTodos = {
@@ -44,13 +50,19 @@ export default function AddTodo() {
     setBody("");
   };
 
-  // [삭제하기]버튼 클릭 이벤트 핸들러
+  /**
+   * [삭제] 버튼 클릭 이벤트 핸들러
+   * @param {string} id - 투두 아이디
+   */
   const onRemoveBtnHandler = (id) => {
     const newTodos = todos.filter((todo) => todo.id !== id);
     setTodos(newTodos);
   };
 
-  // [완료<->취소]버튼 클릭 이벤트 핸들러
+  /**
+   * [완료<->취소] 버튼 클릭 이벤트 핸들러
+   * @param {string} id - 투두 아이디
+   */
   const onEditBtnHandler = (id) => {
     setTodos((todos) =>
       todos.map((todo) =>

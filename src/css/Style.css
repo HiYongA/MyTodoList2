@@ -85,13 +85,17 @@ header {
 .todo-style {
   border: 4px outset powderblue;
   width: 270px;
-  height: 190px;
   border-radius: 10px;
   padding: 20px;
 }
 
 .todo-style h3 {
   margin: 20px 0;
+  word-break: break-all;
+}
+
+.todo-style p {
+  word-break: break-all;
 }
 
 .btn {

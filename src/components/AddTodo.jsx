@@ -9,21 +9,7 @@ import "css/Style.css";
  */
 export default function AddTodo() {
   const [todos, setTodos] = useState(
-    () =>
-      JSON.parse(window.localStorage.getItem("todos")) || [
-        {
-          id: uuidv4(),
-          title: "개인과제 복습하기",
-          body: "Todo List 여러 번 반복 연습하자!",
-          isDone: false,
-        },
-        {
-          id: uuidv4(),
-          title: "TIL 작성하기",
-          body: "JSDoc에 대해 적기",
-          isDone: true,
-        },
-      ]
+    () => JSON.parse(window.localStorage.getItem("todos")) || []
   );
   window.localStorage.setItem("todos", JSON.stringify(todos));
 

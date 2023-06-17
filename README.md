@@ -29,9 +29,9 @@
 
 - AddTodo.jsx : Todo를 추가하는 기능을 담당
 
-- Todo.jsx : 각각의 Todo항목을 표시하고 삭제 및 완료 상태 변경을 처리하는 컴포넌트
+- Todo.jsx : 각각의 Todo 항목을 표시하고 삭제 및 완료 상태 변경을 처리하는 컴포넌트
 
-- TodoList.jsx : Todo항목들을 관리하고 보여주는 역할을 담당
+- TodoList.jsx : Todo 항목들을 관리하고 보여주는 역할을 담당
 
 
 ## 기술 스택

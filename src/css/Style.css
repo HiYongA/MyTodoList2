@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background-color: var(--color-bg-dark); */
+  color: var(--color-text);
 }
 
 .layout {
@@ -19,7 +21,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .form-style {
@@ -39,7 +41,7 @@ header {
 }
 
 .input-style {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
 
   display: flex;
@@ -49,11 +51,12 @@ header {
   gap: 20px;
 }
 
-.input-style input {
+.input {
   border: none;
   border-radius: 10px;
   width: 250px;
   height: 40px;
+  padding-left: 10px;
 }
 
 .btn-style {
@@ -64,8 +67,9 @@ header {
   border: none;
   border-radius: 10px;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .todos-container {
@@ -111,6 +115,7 @@ header {
   border-radius: 10px;
   padding: 8px 40px;
   margin-top: 24px;
+  cursor: pointer;
 }
 
 .edit-btn {
@@ -119,4 +124,5 @@ header {
   border-radius: 10px;
   padding: 8px 40px;
   margin-top: 24px;
+  cursor: pointer;
 }

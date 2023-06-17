@@ -3,7 +3,7 @@
 <br>
 <br>
 
-![Jun-15-2023 19-28-34](https://github.com/HiYongA/MyTodoList/assets/120562771/0b161e1b-4312-4dcf-b13b-ac5697a7e278)
+![Jun-17-2023 15-56-36](https://github.com/HiYongA/MyTodoList/assets/120562771/95b025a9-d1c9-49bd-b342-61b1329dc0bd)
 
 ## 배포 주소
  [https://my-todo-list-iota.vercel.app](https://my-todo-list-iota.vercel.app)
@@ -30,6 +30,8 @@
 - AddTodo.jsx : Todo를 추가하는 기능을 담당
 
 - Todo.jsx : 각각의 Todo항목을 표시하고 삭제 및 완료 상태 변경을 처리하는 컴포넌트
+
+- TodoList.jsx : Todo항목들을 관리하고 보여주는 역할을 담당
 
 
 ## 기술 스택

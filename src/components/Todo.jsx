@@ -1,6 +1,7 @@
 import React from "react";
-import "css/Style.css";
 import JSConfetti from "js-confetti";
+import { Link } from "react-router-dom";
+import { styled } from "styled-components";
 
 /**
  * 투두 항목을 표시하는 컴포넌트
@@ -33,14 +34,13 @@ export default function Todo({ todo, removeFunc, editFunc }) {
     }
   };
   return (
-    <div key={todo.id} className="todo-style">
-      <h3>{todo.title}</h3>
-      <p>{todo.body}</p>
-      <div className="btn">
-        <button className="remove-btn" onClick={() => removeFunc(todo.id)}>
-          삭제
-        </button>
-        <button
+    <TodoWrapper key={todo.id}>
+      <TodoLink to={`/${todo.id}`}>상세보기</TodoLink>
+      <TodoTitle>{todo.title}</TodoTitle>
+      <TodoBody>{todo.body}</TodoBody>
+      <TodoBtnContainer>
+        <RemoveBtn onClick={() => removeFunc(todo.id)}>삭제</RemoveBtn>
+        <ToggleStatusBtn
           className="edit-btn"
           onClick={() => {
             editFunc(todo.id);
@@ -48,8 +48,63 @@ export default function Todo({ todo, removeFunc, editFunc }) {
           }}
         >
           {todo.isDone ? "취소" : "완료"}
-        </button>
-      </div>
-    </div>
+        </ToggleStatusBtn>
+      </TodoBtnContainer>
+    </TodoWrapper>
   );
 }
+
+const TodoWrapper = styled.div`
+  border: 4px outset powderblue;
+  width: 270px;
+  border-radius: 10px;
+  padding: 20px;
+`;
+
+const TodoLink = styled(Link)`
+  text-decoration: none;
+  color: #b1a6db;
+
+  &:hover {
+    color: #563d82;
+    text-decoration: underline;
+  }
+`;
+
+const TodoTitle = styled.h3`
+  font-size: 1.5rem;
+  margin: 20px 0;
+  word-break: break-all;
+`;
+
+const TodoBody = styled.p`
+  word-break: break-all;
+`;
+
+const TodoBtnContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;
+
+const RemoveBtn = styled.button`
+  background: transparent;
+  font-family: "CookieRun-Regular";
+  border: 2px solid #dba6d0;
+  border-radius: 10px;
+  padding: 8px 45px;
+  margin-top: 24px;
+  cursor: pointer;
+`;
+
+const ToggleStatusBtn = styled.button`
+  background: transparent;
+  font-family: "CookieRun-Regular";
+  border: 2px solid #d0dba6;
+  border-radius: 10px;
+  padding: 8px 45px;
+  margin-top: 24px;
+  cursor: pointer;
+`;

@@ -67,7 +67,7 @@
 
 - Action creator 함수들을 `export` 한다.
 
-- Action type은 `app/reducer/ACTION_TYPE` 형태로 작성한다.
+- Action type은 `app/reducer/ACTION_TYPE` 형태로 작성한다.<br/>
   (`모듈 이름/리듀서 이름/액션 타입`)
 
 ## 리듀서가 액션객체를 받아 상태를 바꾸는 원리

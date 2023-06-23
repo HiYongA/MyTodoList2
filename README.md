@@ -1,6 +1,6 @@
 # 개인과제 프로젝트 "My Todo List Lv.2"
 
-이 프로젝트는 간단한 Todo List 웹 애플리케이션입니다.
+이 프로젝트는 간단한 Todo List 웹 애플리케이션입니다.<br/>
 기존 프로젝트에서 react-router-dom, styled-components, redux를 활용하여 새로운 버전인 My Todo List를 구현하였습니다.
 <br>
 <br>

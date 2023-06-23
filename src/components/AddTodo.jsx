@@ -88,6 +88,7 @@ const StLabel = styled.label`
 `;
 
 const StInput = styled.input`
+  font-family: "CookieRun-Regular";
   border: none;
   border-radius: 10px;
   width: 250px;

@@ -33,20 +33,25 @@
 
 ## 컴포넌트 구조
 
-- components폴더 -> AddTodo.jsx : Todo를 추가하는 기능을 담당
-  Todo.jsx : 각 Todo 항목을 표시하고 삭제 및 완료 상태 변경을 처리하는 컴포넌트
+- components폴더 ->
+  - AddTodo.jsx : Todo를 추가하는 기능을 담당
+  - Todo.jsx : 각 Todo 항목을 표시하고 삭제 및 완료 상태 변경을 처리하는 컴포넌트
 
-- pages 폴더 -> Home.js : 메인페이지를 담당하는 컴포넌트
-  TodoDetail.js : 상세 페이지를 담당하는 컴포넌트
+- pages 폴더 ->
+  -  Home.js : 메인페이지를 담당하는 컴포넌트
+  -  TodoDetail.js : 상세 페이지를 담당하는 컴포넌트
 
-- shared 폴더 -> Layout.jsx : 애플리케이션의 레이아웃을 정의하는 컴포넌트
-  Router.js : 애플리케이션의 라우팅을 관리하는 파일
+- shared 폴더 ->
+  - Layout.jsx : 애플리케이션의 레이아웃을 정의하는 컴포넌트
+  -  Router.js : 애플리케이션의 라우팅을 관리하는 파일
 
-- styles 폴더 -> GlobalStyle.jsx : 애플리케이션의 전역 스타일을 설정하는 컴포넌트
-  reset.css : 브라우저의 기본 스타일을 재정의하거나 초기화하는 CSS 파일
+- styles 폴더 ->
+  -  GlobalStyle.jsx : 애플리케이션의 전역 스타일을 설정하는 컴포넌트
+  -  reset.css : 브라우저의 기본 스타일을 재정의하거나 초기화하는 CSS 파일
 
-- redux 폴더 -> configStore.js : 중앙 데이터 관리소(store)
-  modules/todos.js : 전역 state 관리하는 파일
+- redux 폴더 ->
+  - configStore.js : 중앙 데이터 관리소(store)
+  - modules/todos.js : 전역 state 관리하는 파일
 
 ## 기술 스택
 
